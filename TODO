@@ -1,0 +1,34 @@
+{
+Paracetamol: 8,
+               Ibuprofen: 45,
+               Syringe: 80,
+               Scalpel: 90
+}
+What is inventory?
+=> A quantity of merchandise or goods held in stock.
+
+{
+Paracetamol: 8,
+               Ibuprofen: 45,
+               Syringe: 80,
+               Scalpel: 90
+}
+
+-------
+What can we do with an inventory?
+
+stock item
+destock item
+
+-------
+How we will modify to an inventory?
+
+inventory = createInventory();
+inventory.stock('paracetamol', 30);
+inventory.destock('paracetamol', 10);
+
+=> 1st goal 
+To make a structure below and store
+{
+paracetamol: 8;
+}
