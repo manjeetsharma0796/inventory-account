@@ -17,10 +17,7 @@ class Inventory {
   destock(item, quantity) {
     if (this.inventory[item] >= quantity) {
       this.inventory[item] -= quantity;
-      return;
     }
-
-    return 'Quantity limit exceeded or does not exist';
   };
 
   loadItems(stockList) {

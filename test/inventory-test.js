@@ -42,9 +42,9 @@ describe('inventory', function () {
     it('Should not destock an item, when quantity is greater than its stock', function () {
       const ICU = new Inventory();
       ICU.stock('syline', 30);
-      const actual = ICU.destock('syline', 40);
-      const expected = 'Quantity limit exceeded or does not exist';
-      deepStrictEqual(actual, expected);
+      ICU.destock('syline', 40);
+
+      deepStrictEqual(ICU.value(), { syline: 30 });
     });
   });
 
