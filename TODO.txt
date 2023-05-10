@@ -1,0 +1,86 @@
+{
+  Paracetamol: 8,
+  Ibuprofen: 45,
+  Syringe: 80,
+  Scalpel: 90
+}
+-------
+What is inventory ?
+=> A quantity of merchandise or goods held in stock.
+
+{
+  Paracetamol: 8,
+  Ibuprofen: 45,
+  Syringe: 80,
+  Scalpel: 90
+}
+
+-------
+What can we do with an inventory ?
+
+stock item
+destock item
+value check
+
+-------
+How we will modify to an inventory ?
+
+inventoryName = createInventory();
+inventoryName.stock('paracetamol', 30);
+inventoryName.destock('paracetamol', 10);
+
+-------
+=> Goal 
+
+To make a structure below and store
+{
+  paracetamol: 8;
+}
+
+so here paracetamol is an 'item'
+8 is 'quantity'
+
+adding more items will be called as 'stock'
+stock(item, quantity);
+
+inventory will be the name of the above structure
+
+input:
+{
+  Warehouse:
+  {
+    Paracetamol: 10, Ibuprofen: 50, Syringe: 80, Scalpel: 100
+  }
+}
+
+------
+Create a function which reads and stock itself
+
+pseudocode
+ICU.loadItems({ para: 10, IV: 30 });
+ICU.value();
+=> { para: 10, IV: 30 };
+
+------
+loadItems({ para: 10, IV: 30 }) {
+
+}
+
+const ICU = new Inventory();
+
+const ICU = {
+  ICU:
+    { para: 10, IV: 20 }
+}
+
+Why 'loadItems'
+ans -> to make entries of multiple items and quantities.
+
+How does it differs from 'stock' ?
+  'stock' adds an item one at a time.
+
+------
+feedback
+in test statement , i mentioned specific details 
+didn't cover all exit point
+describe separately each method as it gives more meaning
