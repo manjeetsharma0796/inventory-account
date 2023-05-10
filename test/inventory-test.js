@@ -1,9 +1,18 @@
 const {describe, it} = require('node:test');
-const {strictEqual} = require('assert');
-const {rename} = require('../src/inventory.js');
+const {deepStrictEqual} = require('assert');
+const {Inventory} = require('../src/inventory.js');
 
 describe('inventory', function() {
-  it('Should give true', function() {
-    strictEqual(rename(), true);
+  it('Should create an empty inventory of ICU', function() {
+    const ICU = new Inventory();
+  
+    deepStrictEqual(ICU.value(), {});
+  });
+
+  it('Should stock an item with quantity in ICU inventory', function() {
+    const ICU = new Inventory();
+    ICU.stock('syline', 30)
+    
+    deepStrictEqual(ICU.value(), {syline: 30});
   });
 });

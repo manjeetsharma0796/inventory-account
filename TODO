@@ -8,10 +8,10 @@ What is inventory?
 => A quantity of merchandise or goods held in stock.
 
 {
-Paracetamol: 8,
-               Ibuprofen: 45,
-               Syringe: 80,
-               Scalpel: 90
+  Paracetamol: 8,
+  Ibuprofen: 45,
+  Syringe: 80,
+  Scalpel: 90
 }
 
 -------
@@ -32,3 +32,11 @@ To make a structure below and store
 {
 paracetamol: 8;
 }
+
+so here paracetamol is an 'item'
+8 is 'quantity'
+
+adding more items will be called as 'stock'
+stock(item, quantity);
+
+inventory will be the name of the above structure

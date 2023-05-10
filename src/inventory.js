@@ -1,5 +1,23 @@
-const rename = function() {
-  return true;
-}
+class Inventory {
+  #inventory
 
-exports.rename = rename;
+  constructor() {
+    this.#inventory = {};  
+  };
+
+  stock(item, quantity) {
+    if(this.#inventory[item] === undefined) {
+      this.#inventory[item] = quantity;
+      return;
+    }
+
+    this.#inventory[item] += quantity;
+    return;
+  };
+  
+  value() {
+    return this.#inventory;
+  };
+};
+
+exports.Inventory = Inventory;
