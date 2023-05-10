@@ -15,6 +15,11 @@ class Inventory {
     return;
   };
   
+  destock(item, quantity) {
+    this.#inventory[item] -= quantity;
+    return;
+  }
+  
   value() {
     return this.#inventory;
   };
