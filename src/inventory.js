@@ -5,13 +5,16 @@ class Inventory {
     this.inventory = {};
   };
 
+  #isItemNotPresent(item) {
+    return !(item in this.inventory);
+  }
+
   stock(item, quantity) {
-    if (item in this.inventory) {
-      this.inventory[item] += quantity;
-      return;
+    if (this.#isItemNotPresent(item)) {
+      this.inventory[item] = 0;
     }
 
-    this.inventory[item] = quantity;
+    this.inventory[item] += quantity;
   };
 
   destock(item, quantity) {
@@ -27,7 +30,7 @@ class Inventory {
     }
   };
 
-  value() {
+  getInventory() {
     return { ...this.inventory };
   };
 };
